@@ -1,0 +1,14 @@
+from bisect import bisect
+
+def triplets(a, b, c):
+    a, b, c = set(a), set(b), set(c)
+    return sum((bisect(a, x) * bisect(c, x) for x in b))
+
+lenaLenbLenc = input().split()
+lena = int(lenaLenbLenc[0])
+lenb = int(lenaLenbLenc[1])
+lenc = int(lenaLenbLenc[2])
+arra = list(map(int, input().split()))
+arrb = list(map(int, input().split()))
+arrc = list(map(int, input().split()))
+print(triplets(arra, arrb, arrc))
