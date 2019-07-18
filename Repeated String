@@ -1,4 +1,0 @@
-s = input()
-n = int(input())
-count1 = s.count("a") * (n // len(s)) + s[:n % len(s)].count("a")
-print(count1)
